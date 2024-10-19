@@ -3,18 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ML Model - Top 3 Performances</title>
+    <title>Top Performers</title>
+    <style>
+        /* Center the content on the page */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        /* Heading style */
+        h1 {
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+
+        /* Select dropdown style */
+        select {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+
+        select:hover {
+            border-color: #0056b3;
+        }
+
+        /* Button style */
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Message display */
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #28a745;
+            display: none; /* Initially hidden */
+        }
+    </style>
 </head>
 <body>
-    <h1>Predict Top 3 Performances Based on Year</h1>
-    <form id="prediction-form">
-        <label for="year">Enter Year (1, 2, 3, or 4):</label>
-        <input type="text" name="year" required><br>
-
-        <input type="submit" value="Get Top 3">
-    </form>
-    
-    <h2> <span id="result"></span></h2>
+    <h1>Top Performers in RGMCET</h1>
+    <select id="year" name="year">
+        <option value="1">--1 year--</option>
+        <option value="2">--2 year--</option>
+        <option value="3">--3 year--</option>
+        <option value="4">--4 year--</option>
+    </select>
+    <button onclick="displayMessage()">Show Performers</button>
+    <div class="message" id="message">Performers for Year: <span id="selectedYear"></span></div>
+     
 
     <script>
         document.getElementById('prediction-form').addEventListener('submit', async function (e) {
