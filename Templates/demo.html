@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Model - Top 3 Performances</title>
+</head>
+<body>
+    <h1>Predict Top 3 Performances Based on Year</h1>
+    <form id="prediction-form">
+        <label for="year">Enter Year (1, 2, 3, or 4):</label>
+        <input type="text" name="year" required><br>
+
+        <input type="submit" value="Get Top 3">
+    </form>
+    
+    <h2> <span id="result"></span></h2>
+
+    <script>
+        document.getElementById('prediction-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const response = await fetch('/predict', {
+                method: 'POST',
+                body: formData,
+            });
+
+            const result = await response.json();
+            document.getElementById('result').innerText = result.top3_performances.join(', ');
+        });
+    </script>
+</body>
+</html>

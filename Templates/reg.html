@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form - Best-Performing Student Recognition System</title>
+    <link rel="stylesheet" href="C:\Users\kalpa\Desktop\Hackathon\Static\regi.css">
+</head>
+<body>
+    <header>
+        <h1>Student Registration</h1>
+    </header>
+
+    <main class="registration-form">
+        <h2>Registration Form</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="id-number">ID:</label>
+            <input type="text" id="id-number" name="id-number" required>
+            <label for="branch">BRANCH :</label>
+            <input type="text" id="branch" name="branch" required>
+
+            <label for="cgpa">PERCENTAGE:</label>
+            <input type="number" step="0.01" id="cgpa" name="cgpa" required>
+
+            <label for="local-hackathons-participated">Local Hackathons Participated:</label>
+            <input type="number" id="local-hackathons-participated" name="local-hackathons-participated" required>
+
+            <label for="local-hackathons-won">Local Hackathons Won:</label>
+            <input type="number" id="local-hackathons-won" name="local-hackathons-won" required>
+
+            <label for="paper-presentations">Paper Presentations:</label>
+            <input type="number" id="paper-presentations" name="paper-presentations" required>
+
+            <label for="national-hackathons-participated">National Level Hackathons Participated:</label>
+            <input type="number" id="national-hackathons-participated" name="national-hackathons-participated" required>
+
+            <label for="national-hackathons-won">National Level Hackathons Won:</label>
+            <input type="number" id="national-hackathons-won" name="national-hackathons-won" required>
+
+            <label for="certifications">Certifications:</label>
+            <input type="text" id="certifications" name="certifications" required>
+
+            <label for="rd-work-rating">R&D Work Rating (1-10):</label>
+            <input type="number" id="rd-work-rating" name="rd-work-rating" min="1" max="10" required>
+
+            <label for="social-interactions">Social Interactions (1-10):</label>
+            <input type="number" id="social-interactions" name="social-interactions" min="1" max="10" required>
+
+            <label for="paper-publications">Paper Publications:</label>
+            <input type="number" id="paper-publications" name="paper-publications" required>
+
+           <a href="submit.html">" <button type="submit">Submit</button></a>
+        </form>
+    </main>
+    <script src="script.js"></script>
+
+    <footer>
+        <p>&copy; 2024 Best-Performing Student Recognition System. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

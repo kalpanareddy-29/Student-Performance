@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topper Selection</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height of the viewport */
+            background-color: #f4f4f4; /* Light gray background */
+            font-family: Arial, sans-serif; /* Font style */
+        }
+        .container {
+            background-color: white; /* White background for the container */
+            padding: 20px;
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            text-align: center; /* Centered text */
+        }
+        h1 {
+            margin-bottom: 20px; /* Space below the header */
+        }
+        select {
+            padding: 10px; /* Padding inside the select box */
+            border-radius: 4px; /* Rounded corners */
+            border: 1px solid #ccc; /* Border style */
+            font-size: 16px; /* Font size */
+        }
+        button {
+            margin-top: 20px; /* Space above the button */
+            padding: 10px 20px; /* Padding around the button */
+            border: none; /* No border */
+            border-radius: 4px; /* Rounded corners */
+            background-color: #007BFF; /* Blue background */
+            color: white; /* White text */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Year</h1>
+        <form action="your-backend-endpoint" method="POST">
+            <label for="year">Choose a year:</label>
+            <select id="year" name="year" required>
+                <option value="">Select Year</option>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+            </select>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
